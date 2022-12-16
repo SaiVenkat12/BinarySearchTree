@@ -50,5 +50,9 @@ namespace BST
                 this.right.Display();
             }
         }
+        public void getSize()
+        {
+            Console.WriteLine("Size of BinarySearch Tree" + " " + (1 + this.leftCount + this.rightCount));
+        }
     }
 }
