@@ -18,6 +18,7 @@ namespace BST
             this.right = null;
         }
         int leftCount = 0, rightCount = 0;
+        bool result = false;
         public void AddNode(T Value)
         {
             T NodeValue = this.data;
@@ -57,27 +58,19 @@ namespace BST
         public bool ifExist(T element, BinaryTree<T> node)
         {
             if (node == null)
-            {
                 return false;
-            }
             if (node.data.Equals(element))
             {
-                Console.WriteLine("Found the element in BST" + " " + node.data);
+                Console.WriteLine("Found the element in Binary Search Tree" + " " + node.data);
                 return true;
             }
             else
-            {
-                Console.WriteLine("Current element in {0} in BST", node.data);
-            }
-            if (element.CompareTo(node.data) < 0)
-            {
-                ifExist(element, node.left);
-            }
+                Console.WriteLine("Current element is {0} in Binary Search Tree", node.data);
+            if (element.CompareTo(node.data) < 0)           
+                ifExist(element, node.left);         
             if (element.CompareTo(node.data) > 0)
-            {
                 ifExist(element, node.right);
-            }
-            return true;
+            return result;
         }
     }
 }
