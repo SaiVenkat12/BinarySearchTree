@@ -23,6 +23,9 @@ namespace BST
 
             binarySearchTree.Display();
             binarySearchTree.getSize();
+
+            bool result = binarySearchTree.ifExist(63, binarySearchTree);
+            Console.WriteLine(result);
         }
     }
 }
